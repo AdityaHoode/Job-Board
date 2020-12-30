@@ -1,0 +1,21 @@
+{
+  "name": "job_board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "node api/index.js",
+    "client": "npm start --prefix client",
+    "cronjob": "node worker/index.js",
+    "dev": "concurrently \"npm run cronjob\" \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "cron": "^1.8.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "redis": "^3.0.2"
+  }
+}
